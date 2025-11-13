@@ -92,19 +92,51 @@ npm run ios
 npm run android
 ```
 
-## Estrutura do Projeto
+## 🧪 Testes
+
+O projeto possui testes unitários para garantir qualidade do código:
+
+```bash
+# Executar todos os testes
+npm test
+
+# Executar testes com coverage
+npm run test:coverage
+```
+
+**Cobertura de testes:**
+- ✅ Utils (dateUtils, recurringUtils)
+- ✅ Services (event mapper, validator, sync, recurring)
+- ✅ Componentes principais
+
+## 📁 Estrutura do Projeto
 
 ```
 /countdown
-├── App.tsx              # Entry point
+├── App.tsx                    # Entry point
 ├── src/
-│   ├── components/      # Componentes reutilizáveis
-│   ├── contexts/        # Context API (Estado global)
-│   ├── hooks/           # Custom hooks
-│   ├── screens/         # Telas do app
-│   ├── services/        # Serviços (API, Storage)
-│   ├── types/           # TypeScript types
-│   └── utils/           # Funções utilitárias
+│   ├── components/            # Componentes reutilizáveis
+│   │   ├── AddEditEventModal.tsx
+│   │   ├── EventCard.tsx
+│   │   ├── EventList.tsx
+│   │   └── ...
+│   ├── contexts/              # Context API (Estado global)
+│   │   ├── AuthContext.tsx    # Gerenciamento de autenticação
+│   │   ├── EventsContext.tsx  # Gerenciamento de eventos
+│   │   └── ThemeContext.tsx   # Tema claro/escuro
+│   ├── hooks/                 # Custom hooks
+│   │   ├── useAuth.ts
+│   │   ├── useEvents.ts
+│   │   └── useCountdown.ts
+│   ├── services/              # Serviços e lógica de negócio
+│   │   ├── supabase.service.ts
+│   │   ├── storage.service.ts
+│   │   ├── notifications.service.ts
+│   │   └── __tests__/         # Testes unitários
+│   ├── types/                 # TypeScript types
+│   └── utils/                 # Funções utilitárias
+└── supabase/
+    └── schema.sql             # Schema do banco de dados
 ```
 
 ## Tecnologias
@@ -123,15 +155,34 @@ npm run android
 
 **Setup completo:**
 
-1. Siga as instruções em [SUPABASE_SETUP.md](./SUPABASE_SETUP.md)
-2. Execute o SQL do schema no Supabase SQL Editor
-3. Execute o SQL de `supabase/fix-rls-policies.sql` para corrigir as políticas RLS
-4. Configure as variáveis de ambiente no arquivo `.env`
-3. Reinicie o servidor
+1. Siga as instruções detalhadas em [SUPABASE_SETUP.md](./SUPABASE_SETUP.md)
+2. Execute o SQL do schema (`supabase/schema.sql`) no Supabase SQL Editor
+3. Configure as variáveis de ambiente no arquivo `.env`
+4. Reinicie o servidor
 
 Com Supabase você ganha:
 - 🌐 Backup automático na nuvem
 - 📱 Multi-dispositivo (acesse de qualquer lugar)
 - 🔄 Sincronização em tempo real
 - 🔐 Segurança e autenticação
+- 🔒 Row Level Security (RLS) para isolamento de dados
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Por favor, leia o [CONTRIBUTING.md](./CONTRIBUTING.md) para detalhes sobre o processo de contribuição.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## 📞 Suporte
+
+Se você encontrar algum problema ou tiver sugestões:
+1. Abra uma [issue](https://github.com/vroxo/countdown/issues)
+2. Descreva o problema ou sugestão detalhadamente
+3. Inclua screenshots se possível
+
+---
+
+**Desenvolvido com ❤️ usando React Native e Expo**
 

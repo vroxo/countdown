@@ -26,17 +26,17 @@
 
 Crie um arquivo `.env` na raiz do projeto com:
 
-\`\`\`env
+```env
 EXPO_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=sua-chave-aqui
-\`\`\`
+```
 
 ## Passo 5: Reiniciar o servidor
 
-\`\`\`bash
+```bash
 # Pare o servidor (Ctrl+C) e reinicie:
 npm start
-\`\`\`
+```
 
 ## Funcionalidades com Supabase
 
@@ -44,11 +44,8 @@ npm start
 ✅ **Multi-dispositivo** - Acesse de qualquer lugar  
 ✅ **Real-time** - Atualizações automáticas  
 ✅ **Backup automático** - Seus dados estão seguros  
-
-## Modo Offline
-
-O app funciona perfeitamente **sem** Supabase configurado!  
-Nesse caso, usa apenas AsyncStorage local.
+✅ **Autenticação segura** - Login obrigatório com email/senha  
+✅ **Row Level Security** - Cada usuário vê apenas seus próprios eventos  
 
 ---
 
