@@ -16,5 +16,8 @@ web-build/
 # Test coverage
 coverage/
 
+# Lock files (too large for GitHub)
+package-lock.json
+
 # Planning files (arquivos de planejamento privados)
 PLAN_*.md
