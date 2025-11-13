@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Countdown App",
+    "slug": "countdown-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#6366f1"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.countdown.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#6366f1"
+      },
+      "package": "com.countdown.app",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#6366f1",
+      "androidMode": "default",
+      "androidCollapsedTitle": "Countdown App"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
+
